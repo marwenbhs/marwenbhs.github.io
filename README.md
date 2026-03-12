@@ -1,61 +1,125 @@
-# Bienvenue sur mon Portfolio
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Administrateur Système</title>
+    <!-- Importation d'une police moderne -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Icônes (FontAwesome) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        /* --- VARIABLES DE COULEURS --- */
+        :root {
+            --bg-color: #0f172a;       /* Bleu nuit très sombre */
+            --card-bg: #1e293b;        /* Bleu gris pour les cartes */
+            --text-main: #e2e8f0;      /* Blanc cassé */
+            --text-muted: #94a3b8;     /* Gris clair */
+            --accent-primary: #38bdf8; /* Cyan électrique */
+            --accent-secondary: #818cf8; /* Indigo */
+            --accent-tertiary: #f472b6; /* Rose néon */
+            --gradient: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+        }
 
-## Marwen Haj Sassi
-### System Consultant | Expert en Infrastructure & Réseaux
-> " Transformer la complexité technique en solutions stables et performantes pour propulser votre infrastructure. "
+        /* --- RESET & BASE --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
----
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
 
-## 👨‍💻 À propos de moi
+        a { text-decoration: none; color: inherit; transition: 0.3s; }
+        ul { list-style: none; }
 
-[cite_start]Passionné par l'univers des systèmes et des réseaux, j'évolue dans le secteur de l'informatique avec une approche intuitive et une motivation constante pour relever les défis techniques les plus complexes[cite: 4]. [cite_start]Mon parcours m'a permis de développer une expertise pointue dans le dépannage en temps réel sur les environnements Windows et Linux, tout en plaçant la satisfaction utilisateur au cœur de mes priorités[cite: 4].
+        /* --- HEADER / HERO SECTION --- */
+        header {
+            min-height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 2rem;
+            background: radial-gradient(circle at top right, #1e293b 0%, transparent 40%);
+        }
 
-[cite_start]En tant que **System Consultant**, je ne me contente pas de maintenir des systèmes ; je conçois des environnements virtualisés haute performance et des stratégies de sauvegarde robustes pour garantir la pérennité de vos données critiques[cite: 27, 29]. [cite_start]Mon objectif est simple : allier rigueur technique et vision stratégique pour offrir une infrastructure fluide, sécurisée et évolutive[cite: 30, 32].
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid var(--accent-primary);
+            margin-bottom: 1.5rem;
+            object-fit: cover;
+            box-shadow: 0 0 20px rgba(56, 189, 248, 0.3);
+        }
 
-[cite_start]Ancien scout et bénévole actif, j'apporte à mes projets une éthique de travail rigoureuse, un esprit d'équipe naturel et une capacité d'adaptation acquise sur le terrain[cite: 37, 38].
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 0.5rem;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
 
----
+        .subtitle {
+            font-size: 1.5rem;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+        }
 
-## 🛠 Compétences Clés
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: var(--gradient);
+            color: white;
+            border-radius: 50px;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(56, 189, 248, 0.4);
+        }
 
-| Administration Système | Réseaux & Sécurité | Virtualisation & Backup |
-| :--- | :--- | :--- |
-| [cite_start]**Windows Server** (AD, DNS, DHCP) [cite: 16, 17, 18] | [cite_start]**Câblage & Supervision** (Zabbix) [cite: 35] | [cite_start]**VMware vSphere** & Hyper-V [cite: 27] |
-| [cite_start]**Gestion CRM & GLPI** (Vtiger) [cite: 12, 13] | [cite_start]**Fibre optique** & Switches [cite: 24, 35] | [cite_start]**Veeam** & Nakivo Replication [cite: 29] |
-| [cite_start]**Linux OS** (Dépannage) [cite: 4] | [cite_start]**Protocoles VOIP** (Asterisk, SIP) [cite: 35] | [cite_start]**Stockage SAN/NAS** & Baies [cite: 28, 31] |
-| [cite_start]**Documentation Technique** (LLD) [cite: 33] | [cite_start]**Sécurité** (Kaspersky, Firewalls) [cite: 14, 23] | [cite_start]**Maintenance Serveurs** (Rack/Blade) [cite: 31] |
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(56, 189, 248, 0.6);
+        }
 
----
+        .social-links {
+            margin-top: 2rem;
+        }
 
-## 📈 Expériences Marquantes
+        .social-links a {
+            font-size: 1.5rem;
+            margin: 0 10px;
+            color: var(--text-muted);
+        }
 
-### **System Consultant** | NextStep
-[cite_start]*Mai 2023 - Présent* [cite: 25, 26]
-* [cite_start]Mise en œuvre d'environnements de virtualisation haute performance[cite: 27].
-* [cite_start]Déploiement de solutions critiques de stockage (SAN/NAS) et de sauvegarde[cite: 28, 29].
-* [cite_start]Rédaction de designs techniques détaillés (Low-Level Designs)[cite: 33].
+        .social-links a:hover {
+            color: var(--accent-primary);
+        }
 
-### **System & Network Administrator** | Netcom
-[cite_start]*Mars 2023 - Mai 2023* [cite: 19, 20]
-* [cite_start]Maintenance préventive et curative des infrastructures réseaux clients[cite: 22].
-* [cite_start]Configuration et support des switchs d'accès et routeurs[cite: 21, 24].
+        /* --- SECTIONS GÉNÉRALES --- */
+        section {
+            padding: 5rem 10%;
+        }
 
-### **System & Network Administrator** | Pyramidan
-[cite_start]*Août 2017 - Février 2023* [cite: 10, 11]
-* [cite_start]Gestion complète de l'Active Directory et des serveurs d'impression[cite: 16, 18].
-* [cite_start]Administration du parc informatique, gestion des sauvegardes et de la sécurité (Veeam, Kaspersky)[cite: 14, 15].
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            position: relative;
+        }
 
----
-
-## 🎓 Éducation & Langues
-
-* [cite_start]**Licence en Administration des Réseaux et Services** - Institut Supérieur d'Informatique, Tunisie (2013)[cite: 6, 7, 8].
-* [cite_start]**Langues :** Arabe (Maternel), Français (Courant), Anglais (Professionnel)[cite: 40, 41, 42].
-
----
-
-## 📬 Me contacter
-
-* [cite_start]**Email :** marwenbhs@hotmail.fr [cite: 2]
-* [cite_start]**Localisation :** Ariana 2022, Tunisie [cite: 2]
-* [cite_start]**Téléphone :** +216 50 954 564 [cite: 2]
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: var(--gradient);
+            margin
